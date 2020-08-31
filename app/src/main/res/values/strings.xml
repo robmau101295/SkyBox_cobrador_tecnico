@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">SkyBox_cobrador_tecnico</string>
+    <string name="sky_text">Sky</string>
+    <string name="box_text">Box</string>
+    <string name="selecciona_el_tipo_de_usuario">Seleccione el tipo de usuario: </string>
+    <string name="cobrador">Cobrador</string>
+    <string name="tecnico">Técnico</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="usuario">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="boton_ingresra">Iniciar sesión</string>
+    <string name="title_activity_main_activity2_buscarcliente">MainActivity2_buscarcliente</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="validacion_text">Validación del Servidor</string>
+    <string name="validacion_server_button">VALIDAR SERVIDOR</string>
+    <string name="Ip_server">Dirección IP del servidor</string>
+    <string name="buscar">Buscar Cliente</string>
+    <string name="Seleccione_radiobuttons">Seleccione una opción: </string>
+    <string name="buscar_cliente">Buscar</string>
+    <string name="ingresexCodigo">Ingrese el codigo del cliente...</string>
+    <string name="ingresexCedula">Ingrese la cedula del cliente...</string>
+    <string name="ingresexNombre">Ingrese el nombre del cliente...</string>
+    <string name="user_interceptor">admin</string>
+    <string name="servidor">Puerto del servidor</string>
+    <string name="cancel_dialog">Ok!</string>
+    <string name="detalle.hint.codigo">########</string>
+    <string name="detalle.text.codigo">Código</string>
+    <string name="detalle.text.estado">Estado</string>
+    <string name="detalle.text.calle">Calle</string>
+    <string name="detalle.text.localidad">Localidad</string>
+    <string name="detalle.text.sector">Sector</string>
+    <string name="detalle.text.correoelectronico">Email</string>
+    <string name="detalle.text.telefono">Teléfono / Celular</string>
+</resources>

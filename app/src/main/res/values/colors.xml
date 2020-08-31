@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0eb7fc</color>
+    <color name="colorPrimaryDark">#5DFFDF</color> <!--Color de Fondo en layouts-->
+    <color name="colorAccent">#0eb7fc</color>
+
+    <color name="color_primary">#FFFFFF</color> <!--Color Texto Dialog / OK: ACCESO ACEPTADO / lINEAS-->
+    <!--Boton de buscar por codigo esta con el color_primary-->
+    <color name="color_primary_variant">#87FF00</color>
+
+    <color name="color_secondary">#ff9100</color>
+    <color name="color_secondary_variant">#c56200</color>
+
+    <color name="color_background">#0eb7fc</color> <!--COLOR DE FONDO-->
+    <color name="color_surface">#047FB1</color>
+    <color name="color_error">#F44336</color>
+
+    <color name="color_on_primary">#ffffff</color>
+    <color name="color_on_secondary">#ffffff</color>
+    <color name="color_on_background">#ffffff</color>
+    <color name="color_on_surface">#ffffff</color>
+    <color name="color_on_error">#ffffff</color>
+</resources>

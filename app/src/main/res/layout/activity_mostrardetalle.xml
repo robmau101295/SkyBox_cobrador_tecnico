@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="skybox.com.scmtv.mostrardetalle">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_factura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/imgViewMostrarDetalle"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/ic_usuario"></ImageView>
+
+            <TextView
+                android:id="@+id/tvNombreUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Nombre de Cliente"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--        <View style="@style/divisor" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tvCodigoCliente"
+                    style="@style/texto_center"
+                    android:text="@string/detalle.text.codigo" />
+
+                <View style="@style/divisordark" />
+
+                <TextView
+                    android:id="@+id/subtitulo_codigo"
+                    style="@style/subtitulos_left"
+                    android:text="@string/detalle.text.codigo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tvEstadoCliente"
+                    style="@style/texto_center"
+                    android:text="@string/detalle.text.estado"
+                    android:textColor="@color/colorPrimary" />
+
+                <View style="@style/divisordark" />
+
+                <TextView
+                    android:id="@+id/subtitulo_estado"
+                    style="@style/subtitulos_right"
+                    android:text="@string/detalle.text.estado" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--        <View style="@style/divisor" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tvLocalidad"
+                    style="@style/texto_center_light"
+                    android:text="@string/detalle.text.localidad" />
+
+                <View style="@style/divisordark" />
+
+                <TextView
+                    android:id="@+id/subtitulo_pais"
+                    style="@style/subtitulos_left"
+                    android:text="@string/detalle.text.localidad" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tvSector"
+                    style="@style/texto_center_light"
+                    android:text="@string/detalle.text.sector" />
+
+                <View style="@style/divisordark" />
+
+                <TextView
+                    android:id="@+id/subtitulo_provincia"
+                    style="@style/subtitulos_right"
+                    android:text="@string/detalle.text.sector" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/tvCalle"
+                style="@style/texto_center_light"
+                android:text="@string/detalle.text.calle" />
+
+            <View style="@style/divisordark" />
+
+            <TextView
+                android:id="@+id/subtitulo_direccion"
+                style="@style/subtitulos_left"
+                android:text="@string/detalle.text.calle" />
+        </LinearLayout>
+
+        <!--        <View style="@style/divisor" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tvCorreoElectronico"
+                    style="@style/texto_center_light"
+                    android:text="@string/detalle.text.correoelectronico" />
+
+                <View style="@style/divisordark" />
+
+                <TextView
+                    android:id="@+id/subtitulo_correoelectronico"
+                    style="@style/subtitulos_left"
+                    android:text="@string/detalle.text.correoelectronico" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/tvTelefono"
+                    style="@style/texto_center_light"
+                    android:text="@string/detalle.text.telefono" />
+
+                <View style="@style/divisordark" />
+
+                <TextView
+                    android:id="@+id/subtitulo_telefono"
+                    style="@style/subtitulos_right"
+                    android:text="@string/detalle.text.telefono" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--        <View-->
+        <!--            style="@style/divisor"-->
+        <!--            android:layout_margin="0dp" />-->
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tvFacturaEstatico"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="N° Factura"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDescripcionEstatico"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/tvFacturaEstatico"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Descripcion"
+                android:textColor="@color/design_default_color_on_primary"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvVencimientoEstatico"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@+id/tvDescripcionEstatico"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="Fecha"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvImporteEstatico"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@+id/tvVencimientoEstatico"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="Importe"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_dividor_factura"
+            style="@style/divisor"
+            android:layout_margin="0dp" />
+
+
+    </LinearLayout>
+
+<!--    <View-->
+<!--        android:id="@+id/view_dividor_contenedores"-->
+<!--        style="@style/divisor"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_margin="0dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/linearlayout"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/linearlayout"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearlayout" />-->
+
+    <LinearLayout
+        android:id="@+id/fragment_factura"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline18"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutPagos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline19">
+
+        <RadioButton
+            android:id="@+id/rb_PagoPorFactura"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="PAGO EN EFECTIVO"
+            android:textColor="@android:color/white">
+
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/rb_PagoPorTransferencia"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="PAGO CON TRANSFERENCIA"
+            android:textColor="@android:color/white">
+
+        </RadioButton>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="COBRAR"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline20">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
