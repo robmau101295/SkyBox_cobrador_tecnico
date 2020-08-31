@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import skybox.com.scmtv.Cliente.ClienteFragment;
 import skybox.com.scmtv.Facturas.facturaFragment;
 import skybox.com.scmtv.comun.Constantes;
 import skybox.com.scmtv.peticiones.respuestaclientes.Datum;
@@ -61,6 +62,7 @@ public class mostrardetalle extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fragment_factura, new facturaFragment())
                 .commit();
+
 
     }
 

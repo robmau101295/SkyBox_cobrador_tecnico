@@ -57,6 +57,7 @@ public class buscar_cliente extends AppCompatActivity {
         skyBoxCliente = SkyBoxCliente.getInstance();
         skyBoxService = skyBoxCliente.getSkyboxService();
         retrofitInit();
+        //Bienvenidos a la patar de buscar cliente
     }
 
     private void retrofitInit() {

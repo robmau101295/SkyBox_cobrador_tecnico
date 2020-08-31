@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:background="@android:color/white"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_factura"
+        app:layout_constraintBottom_toTopOf="@+id/guideline40percent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -185,7 +185,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:paddingLeft="5dp"
@@ -206,7 +206,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:paddingLeft="5dp"
@@ -215,7 +215,9 @@
                 <TextView
                     android:id="@+id/tvTelefono"
                     style="@style/texto_center_light"
-                    android:text="@string/detalle.text.telefono" />
+                    android:paddingTop="4dp"
+                    android:text="@string/detalle.text.telefono"
+                    android:textSize="12sp" />
 
                 <View style="@style/divisordark" />
 
@@ -235,7 +237,7 @@
             android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             android:background="@color/colorPrimary"
             android:orientation="horizontal">
 
@@ -244,7 +246,7 @@
                 android:id="@+id/tvFacturaEstatico"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:gravity="center"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
@@ -261,7 +263,7 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
                 android:layout_toEndOf="@+id/tvFacturaEstatico"
-                android:layout_weight="4"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
@@ -278,7 +280,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
                 android:layout_toEndOf="@+id/tvDescripcionEstatico"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:gravity="center"
                 android:text="Fecha"
                 android:textColor="@color/ic_launcher_background"
@@ -292,7 +294,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
                 android:layout_toEndOf="@+id/tvVencimientoEstatico"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:gravity="center"
                 android:text="Importe"
                 android:textColor="@color/ic_launcher_background"
@@ -310,92 +312,127 @@
 
     </LinearLayout>
 
-<!--    <View-->
-<!--        android:id="@+id/view_dividor_contenedores"-->
-<!--        style="@style/divisor"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_margin="0dp"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/linearlayout"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/linearlayout"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/linearlayout" />-->
-
     <LinearLayout
         android:id="@+id/fragment_factura"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:background="@color/colorPrimary"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline19"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline70percent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline18"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@id/guideline40percent"
+        app:layout_constraintVertical_bias="0.511"></LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearLayoutPagos"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintBottom_toTopOf="@id/guideline75percent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline19">
+        app:layout_constraintTop_toBottomOf="@id/guideline70percent">
 
-        <RadioButton
-            android:id="@+id/rb_PagoPorFactura"
+        <TextView
+            android:id="@+id/tvTotalaCancelar"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="PAGO EN EFECTIVO"
-            android:textColor="@android:color/white">
+            android:gravity="center"
+            android:text="Total a Cancelar: "
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSize.form" />
 
-        </RadioButton>
-
-        <RadioButton
-            android:id="@+id/rb_PagoPorTransferencia"
+        <TextView
+            android:id="@+id/tvSumaFactura"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="PAGO CON TRANSFERENCIA"
-            android:textColor="@android:color/white">
+            android:gravity="center"
+            android:text="---"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textSize.form.big.24"
+            android:textStyle="bold" />
 
-        </RadioButton>
 
     </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButton"
+    <LinearLayout
+        android:id="@+id/LLOpcionPago"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="COBRAR"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/guideline75percent"
+        app:layout_constraintBottom_toTopOf="@id/guideline88percent">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_pagoenefectivo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="PAGO EN EFECTIVO"
+                android:textColor="@android:color/white"
+                android:textStyle="bold">
+
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rb_pagotransferencia"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="PAGO POR TRANSFERENCIA"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"></RadioButton>
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/BotonCobrar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline20">
+        app:layout_constraintTop_toBottomOf="@id/guideline88percent"
+        android:text="COBRAR"
+        android:textSize="34sp"
+        android:textColor="@color/colorPrimary">
 
     </com.google.android.material.button.MaterialButton>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+
+
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline19"
+        android:id="@+id/guideline40percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.40218878" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline20"
+        android:id="@+id/guideline70percent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline75percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline88percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.88" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
